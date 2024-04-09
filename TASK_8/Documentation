@@ -1,0 +1,17 @@
+a file fabriksolver contains all the code in the form of classes and methods and is executed through main
+explaination of the flow of code is as follows
+initially a function named unit vector is defined which is used for calculating a unit vector in the direction of the given vector. this is used during the implementation of fabrik method explained later.
+a class named segment3d is created. and whenever a new instance of this class is created a __init__ method is called which specifies the reference point, length of the arm and angle along z and y axis respectively.
+to orient the arm segment in the required position. a rotation of the coordinates are performed according to the angles provided.
+these new coordinates are then stored
+this was the process of taking input of the values from the user and orienting the arm segment
+a class named fabriksolver3d is created to apply the fabrik algorithm.
+whenever a new instance of the class is created the initial attributes  i.e. base of the robotic arm and error margin is setup.
+to add the segments given by the user as input , a function named addsegment taking length , angle with y axis and angle with z axis as its parameters and using the class segment3d creates a  a new segment and add it to the segment list.
+after the definition another function is defined to check whether the target is reachable of not. if the total armlength is less than distance between the final point and the basepoint then the target is not reachable.
+the target numpy array store the target coordinates
+now applying the fabrik algorithm . first starting from the back and applying the backward treversal . 
+if the segment is the last one ,compute a unit vector whose direction is given by two points namely the target point and one penultimate cordinate of the segments and then multiplying it with the length of the last segment and changing the segment coordinates accordingly.
+if the segment is the middle one , applying the same logic , in place of target we have that pint itself.
+then iterating the same way in forward direction
+iterate the fabrik algorithm until the distance from the target and the end effector is within the margin value( as the end point will converge to the target but will never point out at exactly at the target hence we keep a margin of eror in our code)
