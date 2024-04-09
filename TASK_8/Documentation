@@ -12,6 +12,7 @@ after the definition another function is defined to check whether the target is 
 the target numpy array store the target coordinates
 now applying the fabrik algorithm . first starting from the back and applying the backward treversal . 
 if the segment is the last one ,compute a unit vector whose direction is given by two points namely the target point and one penultimate cordinate of the segments and then multiplying it with the length of the last segment and changing the segment coordinates accordingly.
-if the segment is the middle one , applying the same logic , in place of target we have that pint itself.
+if the segment is the middle one , applying the same logic , in place of target we have that point itself.
 then iterating the same way in forward direction
 iterate the fabrik algorithm until the distance from the target and the end effector is within the margin value( as the end point will converge to the target but will never point out at exactly at the target hence we keep a margin of eror in our code)
+at the end of the implemnetation of algorithm  we got the joints (coordinates of the points where the segemnts i.e. arms are intersecting). then i found 3 vector along the segments and used the dot product formula to calculate the angle between the two vectors . this provided us the angle between the different segemnst of th earm.
