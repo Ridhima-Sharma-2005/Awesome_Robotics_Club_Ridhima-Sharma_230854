@@ -4,7 +4,6 @@ screenshot of the circuit
 
 link of the tinkercad file
 https://www.tinkercad.com/things/5nuZPh8Mb7n-flappy-bird
-https://www.tinkercad.com/things/5nuZPh8Mb7n-flappy-bird/editel?returnTo=%2Fthings%2F5nuZPh8Mb7n-flappy-bird
 any of the above links will work fine
 
 
